@@ -24,7 +24,8 @@ namespace CairoDesktop.Common.Localization
             new KeyValuePair<string, string>("Turkish (Türkçe)", "tr_TR"),
             new KeyValuePair<string, string>("한국어", "ko_KR"),
             new KeyValuePair<string, string>("Magyar (Hungarian)", "hu_HU"),
-			new KeyValuePair<string, string>("Slovenščina (Slovensko)", "sl_SI")
+			new KeyValuePair<string, string>("Slovenščina (Slovensko)", "sl_SI"),
+            new KeyValuePair<string, string>("日本語", "ja_JP")
         };
 
         public DisplayString()
@@ -41,7 +42,8 @@ namespace CairoDesktop.Common.Localization
             if (useLang.StartsWith("fr_"))
             {
                 lang = Language.fr_FR;
-            }else if (useLang.StartsWith("it_"))
+            }
+            else if (useLang.StartsWith("it_"))
             {
                 lang = Language.it_IT;
             }
@@ -100,10 +102,14 @@ namespace CairoDesktop.Common.Localization
             {
                 lang = Language.hu_HU;
             }
-			else if (useLang.StartsWith("sl_"))
-			{
-				lang = Language.sl_SI;
-			}
+            else if (useLang.StartsWith("sl_"))
+            {
+                lang = Language.sl_SI;
+            }
+            else if (useLang.StartsWith("ja_"))
+            {
+                lang = Language.ja_JP;
+            }
             else
             {
                 lang = Language.en_US;
